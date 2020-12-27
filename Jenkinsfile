@@ -4,7 +4,7 @@ pipeline {
         stage('hello AWS') {
             steps {
                 withAWS(credentials: 'jenkins', region: 'us-west-1') {
-                sh 'aws iam get-user'
+                sh '/usr/local/bin/aws iam get-user'
                 }
             }
         }
